@@ -71,7 +71,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Color2Enable: 0
-    - _Color2Fade: 0.01
+    - _Color2Fade: 0.137
     - _Color2Level: -8.46
     - _Color2OverlayType: 0
     - _Cutoff: 0.35
