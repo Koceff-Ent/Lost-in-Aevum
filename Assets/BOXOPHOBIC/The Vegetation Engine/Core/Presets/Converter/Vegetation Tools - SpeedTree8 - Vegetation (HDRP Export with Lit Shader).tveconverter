@@ -1,0 +1,43 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoPreset Use this preset to convert vegetation exported with the HDRP setup and using Lit shaders. SpeedTree assets can not be converted directly, you will need to create a new prefab first!
+InfoStatus Best motion quality, Mesh variation (Fast), Vertex occlusion
+InfoOnline https://assetstore.unity.com/publishers/9474
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+Mesh Occlusion GET_MASK_FROM_CHANNEL 0
+Mesh DetailMask GET_MASK_PROCEDURAL 8
+Mesh DetailCoord GET_COORD_FROM_CHANNEL 0
+
+Mesh Variation GET_MASK_FROM_CHANNEL 7 ACTION_REMAP01
+
+Mesh Motion1 GET_MASK_PROCEDURAL 4
+Mesh Motion2 GET_MASK_FROM_CHANNEL 6
+Mesh Motion3 GET_MASK_PROCEDURAL 14
+
+*******************************************************************
+
+Include Bark by HD Clip Settings
+Include Unity Lit Commons
+
+// Set default settings
+Material SET_FLOAT _GlobalSize 0
+Material SET_FLOAT _GlobalSizeFade 0
+Material SET_FLOAT _SubsurfaceMinValue 1
+Material SET_FLOAT _SubsurfaceMaxValue 0
+
+Material SET_COLOR _SubsurfaceColor 0.33 0.50 0 0
+
+// Combine Texture Channels fot HD
+Texture MainMetallic GET_RED _MaskMap
+Texture MainOcclusion GET_GREEN _MaskMap
+Texture MainMask GET_GRAY _ThicknessMap
+Texture MainSmoothness GET_ALPHA _MaskMap
+

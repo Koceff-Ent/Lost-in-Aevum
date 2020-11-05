@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33511315913176330}
   - component: {fileID: 23371569873800640}
   - component: {fileID: 205835904976363664}
+  - component: {fileID: 693467359325779263}
   m_Layer: 0
   m_Name: Tall_Grass_1A1
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012448576194492}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.016469955, y: 0.10000002, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -41,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012448576194492}
-  m_Mesh: {fileID: 4300018, guid: a90d484a11807674581bce2791eb70e0, type: 3}
+  m_Mesh: {fileID: 4300000, guid: db12e7e08878eef4785e1073c387d93c, type: 2}
 --- !u!23 &23371569873800640
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 163ed9c961e09a744aa663f971e6a1dd, type: 2}
+  - {fileID: 2100000, guid: 184d78a7723386e4eb2b789d7cd1c023, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -104,6 +105,24 @@ LODGroup:
     renderers:
     - renderer: {fileID: 23154979942147426}
   m_Enabled: 1
+--- !u!114 &693467359325779263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012448576194492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e7123bacb77a429df24ec08d2d672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  storedPrefabBackup: {fileID: 1012448576194492, guid: 96144476505fd0245a479b3bbd836167,
+    type: 3}
+  storedMaxBoundsInfo: {x: 1.8900602, y: 2.324947, z: 2.324947, w: 0}
+  storedPresetPath: Assets/BOXOPHOBIC/The Vegetation Engine/Core/Presets/Converter/Procedural
+    - Grass.tveconverter
 --- !u!1 &1452329298891298
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +148,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452329298891298}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.000005722046, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -143,7 +162,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452329298891298}
-  m_Mesh: {fileID: 4300012, guid: a90d484a11807674581bce2791eb70e0, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 1c003c877f534334e86ab0dd60a8cf95, type: 2}
 --- !u!23 &23154979942147426
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -162,7 +181,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 163ed9c961e09a744aa663f971e6a1dd, type: 2}
+  - {fileID: 2100000, guid: 184d78a7723386e4eb2b789d7cd1c023, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
