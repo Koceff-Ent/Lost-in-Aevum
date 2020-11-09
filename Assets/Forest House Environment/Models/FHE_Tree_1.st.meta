@@ -37,7 +37,7 @@ SpeedTreeImporter:
       assembly: UnityEngine.CoreModule
       name: FHE_Tree_1_LOD2
     second: {fileID: 2100000, guid: 7234f84a0a709e84a95251d4d397ec7c, type: 2}
-  serializedVersion: 5
+  serializedVersion: 6
   mainColor: {r: 1, g: 1, b: 1, a: 1}
   hueVariation: {r: 1, g: 0.5, b: 0, a: 0.05882353}
   alphaTestRef: 0.33
@@ -87,6 +87,7 @@ SpeedTreeImporter:
   scaleFactor: 0.3048
   materialVersion: 3
   materialLocation: 1
+  fileIDType: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
