@@ -12,7 +12,7 @@ Material:
   m_ShaderKeywords: _COLOR2OVERLAYTYPE_VERTEX_POSITION_BASED _SNOWOVERLAYTYPE_WORLD_NORMAL_BASED
     _WIND_ON
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -71,7 +71,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Color2Enable: 0
-    - _Color2Fade: 0.137
+    - _Color2Fade: 0.01
     - _Color2Level: -8.46
     - _Color2OverlayType: 0
     - _Cutoff: 0.35
