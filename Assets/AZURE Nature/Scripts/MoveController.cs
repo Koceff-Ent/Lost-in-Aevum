@@ -15,7 +15,7 @@ public class MoveController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
     }
-
+    
     void Update()
     {
             if(characterController.isGrounded && velocity.y < 0)

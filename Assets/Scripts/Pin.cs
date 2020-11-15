@@ -5,13 +5,16 @@ using UnityEngine;
 public class Pin : MonoBehaviour
 {
     [SerializeField] GameObject interactionMessage;
-
-
+    [SerializeField] GameObject playerController;
+    
     private void OnTriggerStay(Collider collider)
     {
         if (Input.GetKeyDown(KeyCode.E))
-            collider.gameObject.SetActive(false);
-        Debug.Log("E pressed");
+        {
+          //  collider.gameObject.SetActive(false);
+            playerController.transform.position.Set(2, 3, 4);
+            
+        }
     }
 
 
