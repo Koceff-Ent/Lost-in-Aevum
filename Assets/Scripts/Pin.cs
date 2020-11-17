@@ -7,9 +7,13 @@ public class Pin : MonoBehaviour
 {
     [SerializeField] GameObject interactionMessage;
     [SerializeField] TextMeshProUGUI code;
+    [SerializeField] Animator animator;
+    [SerializeField] BoxCollider triggerCollider;
+    [SerializeField] ControllerState player;
     bool cursorShown = false;
 
 
+   
     private void OnTriggerStay(Collider collider)
     {
         //Code executed on E pressed, while in range
@@ -17,6 +21,7 @@ public class Pin : MonoBehaviour
         {
             if (cursorShown == false)
             {
+                player.FreezeController();
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
                 interactionMessage.gameObject.SetActive(false);
@@ -24,6 +29,7 @@ public class Pin : MonoBehaviour
             }
             else
             {
+                player.UnFreezeController();
                 DisableEverything(ref cursorShown);
                 interactionMessage.gameObject.SetActive(true);
 
@@ -38,17 +44,20 @@ public class Pin : MonoBehaviour
             //If its correct
             if (code.text.Equals("2472"))
             {
-                this.gameObject.SetActive(false);
-                DisableEverything(ref cursorShown);
                 FindObjectOfType<AudioManager>().Play("Correct");
-                
+                DisableEverything(ref cursorShown);
+                triggerCollider.enabled = false;
+                animator.Play("DoorOpen", 0, 0.0f);
+                player.UnFreezeController();
+
             }
             //If incorrect
             else
             {
-                
+
                 code.text = "";
                 FindObjectOfType<AudioManager>().Play("Wrong");
+
             }
         }
 
