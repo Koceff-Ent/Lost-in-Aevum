@@ -40,12 +40,15 @@ public class Pin : MonoBehaviour
             {
                 this.gameObject.SetActive(false);
                 DisableEverything(ref cursorShown);
+                FindObjectOfType<AudioManager>().Play("Correct");
+                
             }
             //If incorrect
             else
             {
                 
                 code.text = "";
+                FindObjectOfType<AudioManager>().Play("Wrong");
             }
         }
 
