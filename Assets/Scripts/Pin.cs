@@ -13,7 +13,7 @@ public class Pin : MonoBehaviour
     bool cursorShown = false;
 
 
-   
+
     private void OnTriggerStay(Collider collider)
     {
         //Code executed on E pressed, while in range
@@ -45,6 +45,7 @@ public class Pin : MonoBehaviour
             if (code.text.Equals("2472"))
             {
                 FindObjectOfType<AudioManager>().Play("Correct");
+                FindObjectOfType<AudioManager>().Play("DoorOpenSound");
                 DisableEverything(ref cursorShown);
                 triggerCollider.enabled = false;
                 animator.Play("DoorOpen", 0, 0.0f);
