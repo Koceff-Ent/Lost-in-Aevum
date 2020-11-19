@@ -134,9 +134,9 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _Snow: 0
     - _Snow1: 0
-    - _SnowAmount: 0.358
+    - _SnowAmount: 0.31
     - _SnowAmount1: 0.5
-    - _SnowFade: 0.252
+    - _SnowFade: 0.117
     - _SnowLevel: 0
     - _SnowOverlayType: 1
     - _SpecularHighlights: 1

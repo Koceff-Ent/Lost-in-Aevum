@@ -127,10 +127,10 @@ Material:
     - _SrcBlend: 1
     - _TransAmbient: 0
     - _TransDirect: 1
-    - _TransNormalDistortion: 0
+    - _TransNormalDistortion: 0.186
     - _TransScattering: 1
     - _TransShadow: 1
-    - _Translucency: 2
+    - _Translucency: 6.1
     - _TreeType: 0
     - _UVSec: 0
     - _WIND: 1
