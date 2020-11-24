@@ -23,8 +23,8 @@ public class Pin : MonoBehaviour
             if (cursorShown == false)
             {
                 player.FreezeController();
-                Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
                 animatorImageFade.Play("Interaction Message FadeOut", 0, 0.0f);
                 cursorShown = true;
             }
@@ -69,7 +69,7 @@ public class Pin : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))
-            interactionMessage.gameObject.SetActive(true);
+         //   interactionMessage.gameObject.SetActive(true);
         animatorImageFade.Play("Interaction Message Fade", 0, 0.0f);
     }
 
@@ -86,8 +86,8 @@ public class Pin : MonoBehaviour
 
     private static void DisableEverything(ref bool cursorShown)
     {
-        Cursor.lockState = CursorLockMode.Locked;
         cursorShown = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 
