@@ -7,8 +7,7 @@ public class Pin : MonoBehaviour
 {
     [SerializeField] GameObject interactionMessage;
     [SerializeField] TextMeshProUGUI code;
-    [SerializeField] Animator animatorDoorOpen;
-    [SerializeField] Animator animatorImageFade;
+    [SerializeField] Animator animator;
     [SerializeField] BoxCollider triggerCollider;
     [SerializeField] ControllerState player;
     bool cursorShown = false;
@@ -25,14 +24,14 @@ public class Pin : MonoBehaviour
                 player.FreezeController();
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
-                animatorImageFade.Play("Interaction Message FadeOut", 0, 0.0f);
+                interactionMessage.gameObject.SetActive(false);
                 cursorShown = true;
             }
             else
             {
                 player.UnFreezeController();
                 DisableEverything(ref cursorShown);
-                animatorImageFade.Play("Interaction Message Fade", 0, 0.0f);
+                interactionMessage.gameObject.SetActive(true);
 
             }
         }
@@ -49,13 +48,14 @@ public class Pin : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("DoorOpenSound");
                 DisableEverything(ref cursorShown);
                 triggerCollider.enabled = false;
-                animatorDoorOpen.Play("DoorOpen", 0, 0.0f);
+                animator.Play("DoorOpen", 0, 0.0f);
                 player.UnFreezeController();
 
             }
             //If incorrect
             else
             {
+
                 code.text = "";
                 FindObjectOfType<AudioManager>().Play("Wrong");
 
@@ -70,7 +70,7 @@ public class Pin : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
             interactionMessage.gameObject.SetActive(true);
-        animatorImageFade.Play("Interaction Message Fade", 0, 0.0f);
+
     }
 
 
@@ -79,7 +79,7 @@ public class Pin : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
-            animatorImageFade.Play("Interaction Message FadeOut", 0, 0.0f);
+            interactionMessage.gameObject.SetActive(false);
             DisableEverything(ref cursorShown);
         }
     }

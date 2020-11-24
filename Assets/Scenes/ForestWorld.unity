@@ -12228,7 +12228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &866855059
 Transform:
   m_ObjectHideFlags: 0
@@ -13058,7 +13058,7 @@ Terrain:
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 82
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 84
+  m_DetailObjectDistance: 50
   m_DetailObjectDensity: 0.35
   m_HeightmapPixelError: 1
   m_SplatMapDistance: 1000

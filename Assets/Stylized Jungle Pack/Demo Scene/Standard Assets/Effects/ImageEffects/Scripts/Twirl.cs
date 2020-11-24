@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
 
-
+namespace UnityStandardAssets.ImageEffects
+{
     [ExecuteInEditMode]
     [AddComponentMenu("Image Effects/Displacement/Twirl")]
     public class Twirl : ImageEffectBase
@@ -17,4 +18,4 @@ using UnityEngine;
             ImageEffects.RenderDistortion (material, source, destination, angle, center, radius);
         }
     }
-
+}
