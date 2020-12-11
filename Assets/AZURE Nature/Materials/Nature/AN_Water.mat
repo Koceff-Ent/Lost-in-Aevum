@@ -61,7 +61,7 @@ Material:
     - _Float1: 0
     - _Float2: 0.1
     - _Float3: 0
-    - _FoamContrast: 0.7
+    - _FoamContrast: 0.36
     - _FoamDensity: 0.392
     - _FoamDistance: 0.35
     - _FoamOpacity: 1
@@ -71,7 +71,7 @@ Material:
     - _RefractionIntensity: 0.15
     - _RefractionScale: 0.2
     - _Scale: 50
-    - _Smoothness: 0.482
+    - _Smoothness: 0.562
     - _TransAmbient: 0.2
     - _TransDirect: 1
     - _TransNormalDistortion: 0.1
@@ -80,9 +80,9 @@ Material:
     - _Translucency: 0
     - _UDepthDistance: 0.3
     - _UDistancePower: 0.1
-    - _WavesNormalIntensity: 0
-    - _WavesSpeed: 0
-    - _WavesTile: -1.2
+    - _WavesNormalIntensity: 0.22
+    - _WavesSpeed: 0.211
+    - _WavesTile: -0.17
     - __dirty: 0
     m_Colors:
     - _Color0: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
