@@ -80,8 +80,8 @@ Material:
     - _Translucency: 0
     - _UDepthDistance: 0.3
     - _UDistancePower: 0.1
-    - _WavesNormalIntensity: 0.22
-    - _WavesSpeed: 0.211
+    - _WavesNormalIntensity: 0.35
+    - _WavesSpeed: 0.215
     - _WavesTile: -0.17
     - __dirty: 0
     m_Colors:
