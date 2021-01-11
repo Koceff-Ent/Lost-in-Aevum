@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2210916918572993125}
   - component: {fileID: 1647578245446229153}
   - component: {fileID: 4194539675755506136}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Tree Stand-In
   m_TagString: PW - Nature
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 2278110439886032901}
   - component: {fileID: 4417855763755766844}
   - component: {fileID: 932458569465850173}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: PW_Tree_Spruce_01_06_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

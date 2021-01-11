@@ -5,6 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Water
+  - PW - Nature
+  - Item
+  - TreeSimple
+  - Tree
+  - JumpPad
+  - MiningRock
+  - Fire
+  - PW - Prop
+  - PW - Building
+  - Synty Medium Farm
+  - Synty Small Farm
+  - Synty Tree
+  - Ladder
   layers:
   - Default
   - TransparentFX
@@ -15,10 +28,10 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
+  - PW_VFX
+  - PW_Object_Small
+  - PW_Object_Medium
+  - PW_Object_Large
   - 
   - 
   - 
