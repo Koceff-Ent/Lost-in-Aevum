@@ -480,7 +480,7 @@ namespace Gaia.Pipeline.LWRP
                     }
                 }
             }
-
+/*
             if (postProcessProfiles != null)
             {
                 //Motion blur
@@ -499,6 +499,7 @@ namespace Gaia.Pipeline.LWRP
                     }
                 }
             }
+            */
 #endif
         }
 
