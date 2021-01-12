@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.84400004, g: 0.78428304, b: 0.7882642, a: 1}
+  m_FogColor: {r: 0.1764706, g: 0.84313726, b: 1, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.0008
   m_LinearFogStart: 5
@@ -194,15 +194,15 @@ Terrain:
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: 4435232fb0dc15647a2529e5a072e8cd, type: 2}
   m_TreeDistance: 1000
-  m_TreeBillboardDistance: 90
-  m_TreeCrossFadeLength: 50
+  m_TreeBillboardDistance: 235
+  m_TreeCrossFadeLength: 48
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 190
-  m_DetailObjectDensity: 0.5
+  m_DetailObjectDensity: 0.612
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 2048
   m_HeightmapMaximumLOD: 0
-  m_ShadowCastingMode: 2
+  m_ShadowCastingMode: 1
   m_DrawHeightmap: 1
   m_DrawInstanced: 1
   m_DrawTreesAndFoliage: 1
@@ -660,6 +660,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+--- !u!4 &1393059614 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5077357206451115420, guid: 42232636e76cd754d8b2b4e37d26c125,
+    type: 3}
+  m_PrefabInstance: {fileID: 1993632503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1564100992
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +787,7 @@ Transform:
   m_Children:
   - {fileID: 393767796}
   - {fileID: 1564100994}
+  - {fileID: 1393059614}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -880,8 +887,28 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1594567555}
     m_Modifications:
+    - target: {fileID: -3911165654242900103, guid: 42232636e76cd754d8b2b4e37d26c125,
+        type: 3}
+      propertyPath: mudClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3911165654242900103, guid: 42232636e76cd754d8b2b4e37d26c125,
+        type: 3}
+      propertyPath: grassClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3911165654242900103, guid: 42232636e76cd754d8b2b4e37d26c125,
+        type: 3}
+      propertyPath: stoneClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3911165654242900103, guid: 42232636e76cd754d8b2b4e37d26c125,
+        type: 3}
+      propertyPath: m_FootstepSounds.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -3911165654242900103, guid: 42232636e76cd754d8b2b4e37d26c125,
         type: 3}
       propertyPath: gravity
@@ -911,21 +938,6 @@ PrefabInstance:
         type: 3}
       propertyPath: runMultiplier
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -3911165654242900103, guid: 42232636e76cd754d8b2b4e37d26c125,
-        type: 3}
-      propertyPath: mudClips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -3911165654242900103, guid: 42232636e76cd754d8b2b4e37d26c125,
-        type: 3}
-      propertyPath: grassClips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -3911165654242900103, guid: 42232636e76cd754d8b2b4e37d26c125,
-        type: 3}
-      propertyPath: stoneClips.Array.size
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3911165654242900103, guid: 42232636e76cd754d8b2b4e37d26c125,
         type: 3}
@@ -959,11 +971,6 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
     - target: {fileID: -3911165654242900103, guid: 42232636e76cd754d8b2b4e37d26c125,
         type: 3}
-      propertyPath: m_FootstepSounds.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -3911165654242900103, guid: 42232636e76cd754d8b2b4e37d26c125,
-        type: 3}
       propertyPath: m_FootstepSounds.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
@@ -990,22 +997,22 @@ PrefabInstance:
     - target: {fileID: 5077357206451115420, guid: 42232636e76cd754d8b2b4e37d26c125,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5077357206451115420, guid: 42232636e76cd754d8b2b4e37d26c125,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 235.39243
+      value: -12.914246
       objectReference: {fileID: 0}
     - target: {fileID: 5077357206451115420, guid: 42232636e76cd754d8b2b4e37d26c125,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 122.36
+      value: 1869.7545
       objectReference: {fileID: 0}
     - target: {fileID: 5077357206451115420, guid: 42232636e76cd754d8b2b4e37d26c125,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 197.39609
+      value: 1379.5587
       objectReference: {fileID: 0}
     - target: {fileID: 5077357206451115420, guid: 42232636e76cd754d8b2b4e37d26c125,
         type: 3}
