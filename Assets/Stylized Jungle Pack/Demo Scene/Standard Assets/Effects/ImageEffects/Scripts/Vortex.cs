@@ -16,4 +16,3 @@ using UnityEngine;
             ImageEffects.RenderDistortion (material, source, destination, angle, center, radius);
         }
     }
-
