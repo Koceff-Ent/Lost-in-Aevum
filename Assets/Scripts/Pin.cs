@@ -1,43 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class Pin : MonoBehaviour
 {
-    [SerializeField] GameObject interactionMessage;
     [SerializeField] TextMeshProUGUI code;
     [SerializeField] Animator animatorDoorOpen;
-    [SerializeField] Animator animatorImageFade;
     [SerializeField] BoxCollider triggerCollider;
     [SerializeField] ControllerState player;
     bool cursorShown = false;
 
 
 
-    private void OnTriggerStay(Collider collider)
+    private void OnTriggerStay (Collider collider)
     {
-        //Code executed on E pressed, while in range
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (cursorShown == false)
-            {
-                player.FreezeController();
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.Confined;
-                animatorImageFade.Play("Interaction Message FadeOut", 0, 0.0f);
-                cursorShown = true;
-            }
-            else
-            {
-                player.UnFreezeController();
-                DisableEverything(ref cursorShown);
-                animatorImageFade.Play("Interaction Message Fade", 0, 0.0f);
-
-            }
-        }
-
-
 
         //If code inputed is 4 didgits
         if (code.text.Length == 4)
@@ -47,7 +22,8 @@ public class Pin : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play("Correct");
                 FindObjectOfType<AudioManager>().Play("DoorOpenSound");
-                DisableEverything(ref cursorShown);
+                cursorShown = false;
+                Cursor.lockState = CursorLockMode.Locked;
                 triggerCollider.enabled = false;
                 animatorDoorOpen.Play("DoorOpen", 0, 0.0f);
                 player.UnFreezeController();
@@ -61,35 +37,6 @@ public class Pin : MonoBehaviour
 
             }
         }
-
-
     }
-
-
-    private void OnTriggerEnter(Collider collider)
-    {
-        if (collider.CompareTag("Player"))
-         //   interactionMessage.gameObject.SetActive(true);
-        animatorImageFade.Play("Interaction Message Fade", 0, 0.0f);
-    }
-
-
-
-    private void OnTriggerExit(Collider collider)
-    {
-        if (collider.CompareTag("Player"))
-        {
-            animatorImageFade.Play("Interaction Message FadeOut", 0, 0.0f);
-            DisableEverything(ref cursorShown);
-        }
-    }
-
-    private static void DisableEverything(ref bool cursorShown)
-    {
-        cursorShown = false;
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
-
 
 }
