@@ -32,6 +32,13 @@ public class WaterJugScript : MonoBehaviour
                         animatorMiddleValve.Play("SmallWaterReduce", 3, 0.0f);
                         //Water dropping particle
                     }
+                    else if (hit.transform.gameObject.name.Equals("FinalValve"))
+                    {
+                        animatorMiddleValve.Play("FinalValveSpin", 0, 0.0f);
+                        animatorMiddleValve.Play("SmallWaterReduce", 3, 0.0f);
+                        //Water dropping into bucket/bottle particle
+                    }
+
 
 
                 }
