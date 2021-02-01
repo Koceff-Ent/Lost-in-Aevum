@@ -6,8 +6,7 @@ public class Pin : MonoBehaviour
     [SerializeField] TextMeshProUGUI code;
     [SerializeField] Animator animatorDoorOpen;
     [SerializeField] BoxCollider triggerCollider;
-    [SerializeField] ControllerState player;
-    bool cursorShown = false;
+    [SerializeField] ControllerState player ;
 
 
 
@@ -22,7 +21,6 @@ public class Pin : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play("Correct");
                 FindObjectOfType<AudioManager>().Play("DoorOpenSound");
-                cursorShown = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 triggerCollider.enabled = false;
                 animatorDoorOpen.Play("DoorOpen", 0, 0.0f);
