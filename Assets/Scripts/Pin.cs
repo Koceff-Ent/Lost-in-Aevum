@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class Pin : MonoBehaviour
 {
+    [SerializeField] string correctCode;
     [SerializeField] TextMeshProUGUI code;
     [SerializeField] Animator animatorDoorOpen;
     [SerializeField] BoxCollider triggerCollider;
     [SerializeField] ControllerState player ;
 
-
+    
 
     private void OnTriggerStay (Collider collider)
     {
@@ -17,7 +18,7 @@ public class Pin : MonoBehaviour
         if (code.text.Length == 4)
         {
             //If its correct
-            if (code.text.Equals("2472"))
+            if (code.text.Equals(correctCode))
             {
                 FindObjectOfType<AudioManager>().Play("Correct");
                 FindObjectOfType<AudioManager>().Play("DoorOpenSound");
@@ -36,5 +37,6 @@ public class Pin : MonoBehaviour
             }
         }
     }
+    
 
 }

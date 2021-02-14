@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class PinButtonHandler : MonoBehaviour
 {
-    
- 
+
     public void CodeAddOne(TextMeshProUGUI code)
     {
         code.text += "1";
@@ -62,7 +61,10 @@ public class PinButtonHandler : MonoBehaviour
     {
         if (code.text.Length>0)
         code.text = code.text.Substring(0,code.text.Length-1);
-        
-
     }
+
+ 
+
+
+
 }
