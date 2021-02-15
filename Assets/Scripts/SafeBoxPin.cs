@@ -7,26 +7,39 @@ public class SafeBoxPin : MonoBehaviour
 {
     [SerializeField] string correctCode;
     [SerializeField] TextMeshProUGUI code;
-    [SerializeField] Animator animatorDoorOpen;
-    [SerializeField] BoxCollider triggerCollider;
     [SerializeField] ControllerState player;
+    [SerializeField] AudioClip sound_Correct;
+    [SerializeField] AudioClip sound_Wrong;
+    [SerializeField] AudioClip sound_DoorOpen;
+
+    AudioSource audioSource;
+    BoxCollider triggerCollider;
+    Animator animatorDoorOpen;
 
 
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        triggerCollider = GetComponent<BoxCollider>();
+        animatorDoorOpen = GetComponent<Animator>();
+    }
 
     private void OnTriggerStay(Collider collider)
     {
-
         //If code inputed is 4 didgits
         if (code.text.Length == 4)
         {
             //If its correct
             if (code.text.Equals(correctCode))
             {
-                FindObjectOfType<AudioManager>().Play("Correct");
-             //   FindObjectOfType<AudioManager>().Play("DoorOpenSound");
+                audioSource.clip = sound_Correct;
+                audioSource.Play();
+
+                StartCoroutine(WaitForSound());
+
                 Cursor.lockState = CursorLockMode.Locked;
                 triggerCollider.enabled = false;
-                animatorDoorOpen.Play("SafeBox Open", 0, 0.0f);
                 player.UnFreezeController();
 
             }
@@ -34,10 +47,20 @@ public class SafeBoxPin : MonoBehaviour
             else
             {
                 code.text = "";
-                FindObjectOfType<AudioManager>().Play("Wrong");
+                audioSource.clip = sound_Wrong;
+                audioSource.Play();
 
             }
         }
+    }
+
+    public IEnumerator WaitForSound()
+    {
+        yield return new WaitUntil(() => audioSource.isPlaying == false);
+        audioSource.clip = sound_DoorOpen;
+        audioSource.Play();
+        animatorDoorOpen.Play("SafeBox Open", 0, 0.0f);
+
     }
 
 }
