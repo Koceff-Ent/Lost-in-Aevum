@@ -21,31 +21,31 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0
+    value: 0.8
   color:
-    overrideState: 1
+    overrideState: 0
     value: {r: 0, g: 0, b: 0, a: 1}
   ambientOnly:
-    overrideState: 1
-    value: 0
+    overrideState: 0
+    value: 1
   noiseFilterTolerance:
-    overrideState: 1
+    overrideState: 0
     value: 0
   blurTolerance:
-    overrideState: 1
+    overrideState: 0
     value: -4.6
   upsampleTolerance:
-    overrideState: 1
+    overrideState: 0
     value: -12
   thicknessModifier:
-    overrideState: 1
+    overrideState: 0
     value: 1
   directLightingStrength:
-    overrideState: 1
+    overrideState: 0
     value: 0
   radius:
     overrideState: 1
-    value: 0.25
+    value: 0.4
   quality:
     overrideState: 1
     value: 2
@@ -166,7 +166,7 @@ MonoBehaviour:
     overrideState: 0
     value: 21
   tint:
-    overrideState: 1
+    overrideState: 0
     value: 5
   colorFilter:
     overrideState: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   mixerRedOutBlueIn:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mixerGreenOutRedIn:
     overrideState: 1
@@ -1519,7 +1519,7 @@ MonoBehaviour:
     value: {r: 1, g: 0.89559126, b: 0.8820755, a: 1}
   fastMode:
     overrideState: 1
-    value: 0
+    value: 1
   dirtTexture:
     overrideState: 1
     value: {fileID: 0}
