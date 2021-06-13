@@ -23,6 +23,7 @@ public class HouseDoor : MonoBehaviour
                     if (hit.transform.gameObject.name.Equals("House Door"))
                     {
                         Cursor.lockState = CursorLockMode.Locked;
+                        Cursor.visible = false;
                         doorTrigger.enabled = false;
                         doorAnimator.Play("DoorOpen", 0, 0.0f);
                         player.UnFreezeController();

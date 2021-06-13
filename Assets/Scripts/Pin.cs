@@ -40,6 +40,7 @@ public class Pin : MonoBehaviour
                 StartCoroutine(WaitForSound());
                
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 triggerCollider.enabled = false;
                 player.UnFreezeController();
 
@@ -60,7 +61,7 @@ public class Pin : MonoBehaviour
         yield return new WaitUntil(() => audioSource.isPlaying == false);
         audioSource.clip = sound_DoorOpen;
         audioSource.Play();
-        animatorDoorOpen.Play("DoorOpen", 0, 0.0f);
+        animatorDoorOpen.Play("Base door slide", 0, 0.0f);
 
     }
 

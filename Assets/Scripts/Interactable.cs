@@ -18,8 +18,8 @@ public class Interactable : MonoBehaviour
             if (cursorShown == false)
             {
                 player.FreezeController();
-                Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
                 animatorImageFade.Play("Interaction Message FadeOut", 0, 0.0f);
                 cursorShown = true;
             }
@@ -53,5 +53,6 @@ public class Interactable : MonoBehaviour
     {
         cursorShown = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

@@ -571,7 +571,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ff8f985a9163c16419f2b5ab50c8fbdd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8516691a4190c494d8aab87d27f1d744, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -631,7 +631,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
+  m_FocalLength: 48.30893
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -640,7 +640,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 27.9
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1117,7 +1117,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1958761919}
+      - m_Target: {fileID: 1958761916}
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -1259,13 +1259,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadLevel
-        m_Mode: 3
+      - m_Target: {fileID: 1958761916}
+        m_MethodName: PlayGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1468,9 +1468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1958761918}
-  - component: {fileID: 1958761917}
   - component: {fileID: 1958761916}
-  - component: {fileID: 1958761919}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1487,19 +1485,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1958761915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68ca6f6e41e7c2843a753a13611b097d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1958761917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958761915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68ca6f6e41e7c2843a753a13611b097d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ad34c7424948ed4eab8d85d0e58a95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1958761918
@@ -1517,15 +1503,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1958761919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958761915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ad34c7424948ed4eab8d85d0e58a95c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
